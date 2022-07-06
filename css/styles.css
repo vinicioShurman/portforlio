@@ -5,7 +5,9 @@
     list-style:none;
     border:0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     color: #0B0B0B;
+
 }
 
 :root {
@@ -15,13 +17,13 @@
 
 html {
     scroll-behavior: smooth;
-  
+    overflow-x: hidden;
 }
 
-.buttons {
-    width: fit-content;
-    margin: auto;
-    margin-top: 70px;
+.centralized {
+    margin-left: 16.5vw;
+    margin-right: 15.5vw;
+    margin-top: 326px;
 }
 
 button {
@@ -42,6 +44,12 @@ button:hover {
     color: #fff;
 }
 
+.buttons {
+    width: fit-content;
+    margin: auto;
+    margin-top: 70px;
+}
+
 .intro h1 {
     font-family: var(--libre-bodoni);
     font-weight: 400;
@@ -50,12 +58,34 @@ button:hover {
     overflow: hidden;
     white-space: nowrap;
     margin-left: -2vw;
-    margin-top: 124px;
+    margin-top: -28vh;
+    position: absolute;
 }
 
 .intro p {
     font-weight: 300;
     text-align: center;
     font-size: 3vw;
-    margin-top: -2vw;
+    margin-top: 420px;
+}
+
+.txt h2{
+    font-family: var(--libre-bodoni);
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: 425px;
+    margin-bottom: 34px;
+}
+
+.about .txt {
+    width: 28vw;
+}
+
+/** imgs **/
+
+.about img {
+    width: 892px;
+    position: absolute;
+    top: 930px;
+    left: 54vw;
 }
