@@ -22,8 +22,7 @@ html {
 
 .centralized {
     margin-left: 16.5vw;
-    margin-right: 15.5vw;
-    margin-top: 326px;
+    margin-right: 16.5vw;
 }
 
 button {
@@ -73,7 +72,7 @@ button:hover {
     font-family: var(--libre-bodoni);
     font-weight: 400;
     font-size: 50px;
-    margin-top: 425px;
+    margin-top: 450px;
     margin-bottom: 34px;
 }
 
@@ -83,9 +82,15 @@ button:hover {
 
 /** imgs **/
 
-.about img {
+.notebook {
     width: 892px;
     position: absolute;
     top: 930px;
     left: 54vw;
+}
+
+.txt a img {
+    height: 50px;
+    width: auto;
+    margin: 50px 50px 0 0;
 }
