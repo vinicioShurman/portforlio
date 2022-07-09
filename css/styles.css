@@ -49,6 +49,42 @@ button:hover {
     margin-top: 70px;
 }
 
+.intro {
+    background-color: dodgerblue;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about {
+    background-color: darkorange;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+
+}
+.projects {
+    background-color: darkolivegreen;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 200vh;
+    left: 0;
+}
+
+.contact {
+    background-color: darkred;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 300vh;
+    left: 0;
+}
+
 .intro h1 {
     font-family: var(--libre-bodoni);
     font-weight: 400;
@@ -57,40 +93,49 @@ button:hover {
     overflow: hidden;
     white-space: nowrap;
     margin-left: -2vw;
-    margin-top: -28vh;
-    position: absolute;
+    margin-top: 20vh;
 }
 
 .intro p {
     font-weight: 300;
     text-align: center;
     font-size: 3vw;
-    margin-top: 420px;
+    margin-top: -1vw;
 }
 
-.txt h2{
+.flex-1 {
+    display: flex;
+    margin-top: 15vh;
+    align-items: center;
+}
+
+.txt {
+    margin-left: 18vw;
+    margin-right: 10vw;
+}
+.img{
+    margin-right: 0;
+}
+.flex-1 h2{
     font-family: var(--libre-bodoni);
     font-weight: 400;
     font-size: 50px;
-    margin-top: 450px;
     margin-bottom: 34px;
 }
 
-.about .txt {
+.about p {
     width: 28vw;
 }
 
 /** imgs **/
 
 .notebook {
-    width: 892px;
-    position: absolute;
-    top: 930px;
-    left: 54vw;
+    height: 70vh;
 }
 
 .txt a img {
     height: 50px;
     width: auto;
-    margin: 50px 50px 0 0;
+    margin-top: 50px;
+    margin-right: 2vw;
 }
