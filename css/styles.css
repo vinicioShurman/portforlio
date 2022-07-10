@@ -20,9 +20,11 @@ html {
     overflow-x: hidden;
 }
 
-.centralized {
-    margin-left: 16.5vw;
-    margin-right: 16.5vw;
+h2{
+    font-family: var(--libre-bodoni);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 34px;
 }
 
 button {
@@ -109,18 +111,15 @@ button:hover {
     align-items: center;
 }
 
-.txt {
+.flex-2 {
+    display: flex;
+    margin-top: 15vh;
+    align-items: center;
+}
+
+.txt1 {
     margin-left: 18vw;
     margin-right: 10vw;
-}
-.img{
-    margin-right: 0;
-}
-.flex-1 h2{
-    font-family: var(--libre-bodoni);
-    font-weight: 400;
-    font-size: 50px;
-    margin-bottom: 34px;
 }
 
 .about p {
@@ -133,7 +132,11 @@ button:hover {
     height: 70vh;
 }
 
-.txt a img {
+.code {
+    height: 45vh;
+}
+
+.txt1 a img {
     height: 50px;
     width: auto;
     margin-top: 50px;
