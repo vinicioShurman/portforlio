@@ -12,24 +12,33 @@
 
 :root {
     --black: #0B0B0B;
-    --libre-bodoni: 'Libre Bodoni', 'Times New Roman', serif;
+    --font-title: 'Playfair Display', 'Times New Roman', serif;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
 }
 
 h2{
-    font-family: var(--libre-bodoni);
-    font-weight: 400;
+    font-family: var(--font-title);
+    font-weight: 500;
     font-size: 50px;
     margin-bottom: 34px;
 }
 
+a {
+    visibility: hidden;
+}
+
+img {
+    visibility: visible !important;
+}
+
 button {
-    font-family: var(--libre-bodoni);
-    font-weight: 400;
+    font-family: var(--font-title);
+    font-weight: 500;
     text-align: center;
     font-size: 22px;
     height: 75px;
@@ -51,17 +60,27 @@ button:hover {
     margin-top: 70px;
 }
 
+/** scroll bar **/
+::-webkit-scrollbar {
+    width: 0px;
+  }
+/** - - -**/
+
+.section {
+    scroll-snap-align: start;
+
+}
+
 .intro {
-    background-color: dodgerblue;
     height: 100vh;
     width: 100vw;
-    position: absolute;
     top: 0;
     left: 0;
+    box-sizing: border-box;
+    padding-top: 20vh;
 }
 
 .about {
-    background-color: darkorange;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -70,7 +89,6 @@ button:hover {
 
 }
 .projects {
-    background-color: darkolivegreen;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -79,23 +97,21 @@ button:hover {
 }
 
 .contact {
-    background-color: darkred;
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 300vh;
     left: 0;
+    overflow-y: hidden;
 }
 
 .intro h1 {
-    font-family: var(--libre-bodoni);
-    font-weight: 400;
+    font-family: var(--font-title);
+    font-weight: 500;
     text-align: center;
-    font-size: 13.5vw;
+    font-size: 13.2vw;
     overflow: hidden;
     white-space: nowrap;
-    margin-left: -2vw;
-    margin-top: 20vh;
 }
 
 .intro p {
@@ -113,7 +129,9 @@ button:hover {
 
 .flex-2 {
     display: flex;
-    margin-top: 15vh;
+    position: absolute;
+    right: 0;
+    margin-top: 5vh;
     align-items: center;
 }
 
@@ -122,8 +140,29 @@ button:hover {
     margin-right: 10vw;
 }
 
+.txt2 {
+    margin-left: 10vw;
+    margin-right: 18vw;
+}
+
 .about p {
     width: 28vw;
+}
+
+.contact p {
+    width: 24vw;
+    font-family: var(--font-title);
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.contact p:first-child{
+    margin-bottom: 5vh;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-top: 18vh;
 }
 
 /** imgs **/
@@ -134,6 +173,7 @@ button:hover {
 
 .code {
     height: 45vh;
+    min-height: 300px;
 }
 
 .txt1 a img {
