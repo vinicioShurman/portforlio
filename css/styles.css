@@ -125,9 +125,9 @@ select {
   font-size: var(--fs-900);
 }
 
-@media (max-width: 370px) {
+@media (max-width: 396px) {
   .fs-primary-heading {
-    font-size: 22vw;
+    font-size: 20vw;
   }
 }
 
