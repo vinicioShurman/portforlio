@@ -29,8 +29,8 @@
 @media (min-width: 50em) {
   :root {
     --fs-500: 1.375rem;
-    --fs-800: 9.8rem;
-    --fs-900: 9.8rem;
+    --fs-800: 9.27rem;
+    --fs-900: 9.27rem;
   }
 }
 
@@ -183,7 +183,7 @@ select {
   padding-top: 2vh;
 }
 
-.primary-header{
+.primary-header {
   position: absolute;
   top: 0;
   left: 0;
@@ -204,13 +204,14 @@ select {
   .personal-presentation {
     margin-top: 30vh;
   }
+
   .primary-header {
     height: 8vh;
   }
 }
 
 /* second navbar */
-.secondary-navigation > ul {
+.secondary-navigation>ul {
   position: fixed;
   list-style-type: none;
   display: flex;
@@ -234,7 +235,7 @@ select {
 }
 
 .secondary-navigation>ul>li>a>img {
-  width: var(--size-400); 
+  width: var(--size-400);
 }
 
 @media (min-width: 50em) {
@@ -243,6 +244,7 @@ select {
     right: var(--size-300);
     width: var(--size-400);
   }
+
   .secondary-navigation::before {
     visibility: hidden;
   }
