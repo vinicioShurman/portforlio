@@ -157,6 +157,8 @@ select {
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
+
+  font-family: var(--ff-body)
 }
 
 .header-container {
@@ -165,6 +167,8 @@ select {
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
+
+  font-family: var(--ff-heading);
 }
 
 
