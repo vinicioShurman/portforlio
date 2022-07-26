@@ -20,10 +20,15 @@
   --fs-heading-primary: var(--fs-900);
   --fs-heading-secondary: var(--fs-800);
 
+  --size-010: 0.2rem;
+  --size-200: 1rem;
   --size-300: 2.25rem;
   --size-400: 3.75rem;
   --size-500: 6.5rem;
-
+  --size-700: 15rem;
+  --size-750: 24rem;
+  --size-800: 30rem;
+  --size-spacer: 10vw;
 }
 
 @media (min-width: 50em) {
@@ -69,6 +74,11 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  width: 0px;
 }
 
 /* A elements that don't have a class get default styles */
@@ -108,6 +118,7 @@ select {
   }
 }
 
+
 /* Utility classes */
 .text-400 {
   color: var(--clr-primary-500);
@@ -133,6 +144,7 @@ select {
 
 .fs-secondary-heading {
   font-size: var(--fs-800);
+  margin-left: 500px;
 }
 
 .fs-body {
@@ -147,8 +159,22 @@ select {
   padding-block: var(--size-500);
 }
 
+.padding-top-400 {
+  padding-top: var(--size-400);
+}
+
+.padding-top-500 {
+  padding-top: var(--size-500);
+}
+
 .padding-bottom-500 {
   padding-bottom: var(--size-500);
+}
+
+@media (min-width:50em) {
+  .spacer {
+    margin-top: var(--size-700);
+  }
 }
 
 .container {
@@ -176,69 +202,55 @@ select {
 /* General styling */
 
 /* fist navbar */
-.personal-presentation {
-  display: flex;
+.grid-nav{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: var(--size-200);
+  max-width: var(--size-800);
   align-items: center;
-  gap: 1.25rem;
-  padding-top: 2vh;
 }
 
-.primary-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10vh;
-  background-color: var(--clr-primary-100);
-}
-
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  align-self: flex-start;
-  top: 0;
-  left: 0;
-}
-
-@media (min-width: 50em) {
-  .personal-presentation {
-    margin-top: 30vh;
-  }
-
-  .primary-header {
-    height: 8vh;
+@media (min-width:50em) {
+  .box1 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 98.5%;
+    height: 98%;
+    background-color: transparent;
+    border: var(--size-010) solid #000;
+    outline: var(--size-200) solid #fff;
   }
 }
+
 
 /* second navbar */
 .secondary-navigation>ul {
-  position: fixed;
-  list-style-type: none;
-  display: flex;
-  gap: var(--size-300);
-  justify-content: center;
-  align-items: center;
-  bottom: calc(var(--size-300) / 2);
-  width: 100%;
-}
-
-.secondary-navigation::before {
-  content: " ";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: var(--clr-accent-500);
-  width: 100%;
-  height: var(--size-500);
-  border-radius: 3rem 3rem 0 0;
-  box-shadow: 0 0 1rem .2rem rgb(0, 0, 0, 15%);
-}
-
-.secondary-navigation>ul>li>a>img {
-  width: var(--size-400);
+  position: absolute;
+  visibility: hidden;
+  right: 999vh;
 }
 
 @media (min-width: 50em) {
+  .secondary-navigation>ul {
+    position: fixed;
+    visibility: visible;
+    list-style-type: none;
+    display: flex;
+    gap: var(--size-300);
+    justify-content: center;
+    align-items: center;
+    bottom: calc(var(--size-300) / 2);
+    width: 100%;
+  }
+  
+  .secondary-navigation>ul>li>a>img {
+    width: var(--size-400);
+  }
+
   .secondary-navigation>ul {
     flex-direction: column;
     right: var(--size-300);
