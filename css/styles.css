@@ -23,12 +23,13 @@
   --size-010: 0.2rem;
   --size-200: 1rem;
   --size-300: 2.25rem;
+  --size-350: 3.125rem;
   --size-400: 3.75rem;
   --size-500: 6.5rem;
-  --size-700: 15rem;
+  --size-700: 15.625rem;
   --size-750: 24rem;
   --size-800: 30rem;
-  --size-spacer: 10vw;
+  --size-810: 36rem;
 }
 
 @media (min-width: 50em) {
@@ -171,11 +172,32 @@ select {
   padding-bottom: var(--size-500);
 }
 
+.spacer-500 {
+  margin-top: var(--size-350);
+}
+
+.spacer-primary {
+  margin-top: var(--size-200);
+}
+
+.spacer-700 {
+  margin-top: var(--size-500);
+}
+
 @media (min-width:50em) {
-  .spacer {
+  .spacer-primary {
+    margin-top: var(--size-700);
+  }
+
+  .spacer-700 {
     margin-top: var(--size-700);
   }
 }
+
+
+
+
+
 
 .container {
   --max-width: 1280px;
@@ -197,35 +219,37 @@ select {
   font-family: var(--ff-heading);
 }
 
-
-
 /* General styling */
 
 /* fist navbar */
-.grid-nav{
+
+.grid-nav {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: var(--size-200);
-  max-width: var(--size-800);
+  max-width: var(--size-810);
   align-items: center;
+  top: var(--size-700);
 }
 
-@media (min-width:50em) {
-  .box1 {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 98.5%;
-    height: 98%;
-    background-color: transparent;
-    border: var(--size-010) solid #000;
-    outline: var(--size-200) solid #fff;
-  }
+.contact {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: var(--clr-accent-500);
+  align-items: center;
+  max-width: var(--size-750);
+  height: var(--size-350);
+  cursor: pointer; 
 }
 
+.contact > div:nth-child(n) {
+  margin-inline: auto;
+}
+
+.email-img {
+  width: var(--size-300);
+  height: var(--size-300);
+}
 
 /* second navbar */
 .secondary-navigation>ul {
