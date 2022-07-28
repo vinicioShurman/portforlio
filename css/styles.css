@@ -194,11 +194,6 @@ select {
   }
 }
 
-
-
-
-
-
 .container {
   --max-width: 1280px;
   --padding: 1.2rem;
@@ -227,9 +222,20 @@ select {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: var(--size-200);
-  max-width: var(--size-810);
+  width: 100%;
   align-items: center;
   top: var(--size-700);
+}
+
+.grid-nav div:last-child {
+  text-align: right;
+}
+
+@media (min-width: 50em) {
+  .grid-nav {
+    width: var(--size-810);
+    text-align: left;
+  }
 }
 
 .contact {
